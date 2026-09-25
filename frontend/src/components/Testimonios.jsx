@@ -24,15 +24,14 @@ const Testimonios = () => (
                         <span className="text-amber text-2xl align-top">★</span>
                     </p>
                     <p className="text-sm text-cream/70">
-                        {BUSINESS.reviewsCount} reseñas · uno de los locales mejor
-                        valorados de Valdemoro
+                        Uno de los locales mejor valorados de Valdemoro
                     </p>
                 </div>
             </Reveal>
 
-            <div className="mt-14 grid md:grid-cols-3 gap-5">
+            <div className="mt-14 grid md:grid-cols-2 gap-5">
                 {TESTIMONIALS.map((t, i) => (
-                    <Reveal key={t.name} delay={i * 0.1} className="h-full">
+                    <Reveal key={t.name} delay={i * 0.08} className="h-full">
                         <figure
                             className="h-full flex flex-col rounded-[28px] border border-cream/10 bg-cream/[0.04] p-8 transition-all duration-300 hover:-translate-y-1.5 hover:bg-cream/[0.07]"
                             data-testid="testimonial-card"
@@ -42,13 +41,13 @@ const Testimonios = () => (
                                 “{t.text}”
                             </blockquote>
                             <figcaption className="mt-7 flex items-center gap-3.5">
-                                <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-amber/20 border border-amber/40 font-display font-semibold text-amber">
+                                <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-amber/20 border border-amber/40 font-display font-semibold text-amber shrink-0">
                                     {t.initials}
                                 </span>
                                 <span>
                                     <span className="block font-semibold">{t.name}</span>
                                     <span className="block text-xs text-cream/55">
-                                        Reseña de cliente · Valdemoro
+                                        Reseña real · Google
                                     </span>
                                 </span>
                             </figcaption>

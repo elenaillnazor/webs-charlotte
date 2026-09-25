@@ -3,8 +3,10 @@ import { Reveal, Eyebrow } from "./Reveal";
 import { BUSINESS, IMAGES } from "../data/content";
 
 const isOpen = () => {
-    const h = new Date().getHours();
-    return h < 22;
+    const now = new Date();
+    const day = now.getDay();
+    const opens = day === 0 || day === 6 ? 10 : 9;
+    return now.getHours() >= opens && now.getHours() < 22;
 };
 
 const Contacto = () => (
@@ -81,8 +83,11 @@ const Contacto = () => (
                                 </span>
                                 <div>
                                     <p className="font-semibold">Horario</p>
-                                    <p className="text-sm text-cream/70 mt-0.5">
-                                        Abierto todos los días, cierre a las{" "}
+                                    <p className="text-sm text-cream/70 mt-0.5 leading-relaxed">
+                                        Lunes a viernes: 9:00 –{" "}
+                                        <strong className="text-amber font-semibold">22:00</strong>
+                                        <br />
+                                        Sábados y domingos: 10:00 –{" "}
                                         <strong className="text-amber font-semibold">22:00</strong>
                                     </p>
                                 </div>

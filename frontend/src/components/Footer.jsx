@@ -66,6 +66,10 @@ const Footer = () => (
                             <span>
                                 Abierto todos los días{" "}
                                 <strong className="text-amber font-semibold">hasta las 22:00</strong>
+                                <br />
+                                <span className="text-cream/55">
+                                    Lun–Vie desde las 9:00 · Sáb y Dom desde las 10:00
+                                </span>
                             </span>
                         </li>
                     </ul>

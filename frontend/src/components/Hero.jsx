@@ -139,7 +139,7 @@ const Hero = () => {
                             ))}
                         </span>
                         <strong className="font-semibold text-ink">{BUSINESS.rating}</strong>
-                        <span>· {BUSINESS.reviewsCount} reseñas, uno de los locales mejor valorados de Valdemoro</span>
+                        <span>· uno de los locales mejor valorados de Valdemoro</span>
                     </motion.div>
                 </motion.div>
 
@@ -189,9 +189,9 @@ const Hero = () => {
                                 <span className="text-amber text-lg">★</span>
                             </p>
                             <p className="text-xs font-medium text-cocoa mt-1.5">
-                                {BUSINESS.reviewsCount} reseñas de vecinos
+                                Uno de los locales
                                 <br />
-                                ¡gracias, Valdemoro!
+                                mejor valorados de Valdemoro
                             </p>
                         </motion.div>
 

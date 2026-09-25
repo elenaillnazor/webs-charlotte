@@ -34,7 +34,7 @@ const TrustBar = () => (
                         <div className="pb-2">
                             <Stars size={18} />
                             <p className="mt-2 text-sm text-cream/70">
-                                {BUSINESS.reviewsCount} reseñas
+                                Valoración de nuestros vecinos
                             </p>
                         </div>
                     </div>

@@ -3,7 +3,6 @@ export const BUSINESS = {
     shortName: "Charlotte's",
     tagline: "Heladería & Cafetería Artesanal",
     rating: "4,7",
-    reviewsCount: 46,
     phoneDisplay: "695 33 20 60",
     phoneHref: "tel:+34695332060",
     instagramUrl: "https://www.instagram.com/charlottes.coffee.icecream/?hl=es",
@@ -12,6 +11,8 @@ export const BUSINESS = {
     addressLine2: "Centro Comercial El Restón",
     addressLine3: "28341 Valdemoro, Madrid",
     hoursShort: "Abierto todos los días hasta las 22:00",
+    hoursWeekday: "Lunes a viernes: 9:00 – 22:00",
+    hoursWeekend: "Sábados y domingos: 10:00 – 22:00",
     hoursHighlight: "hasta las 22:00",
     mall: "Centro Comercial El Restón",
     mapsUrl:
@@ -27,10 +28,10 @@ export const IMAGES = {
     realTortitas: "/img/tortitas.jpg",
     realFood: "/img/food.jpg",
     realSalmon: "/img/salmon.jpg",
+    realCafe: "/img/cafe.jpg",
+    realCono: "/img/cono.jpg",
     gelatoBowls:
         "https://images.unsplash.com/photo-1629385744299-74b9cf013f52?crop=entropy&cs=srgb&fm=jpg&q=85",
-    pastryDisplay:
-        "https://images.unsplash.com/photo-1534432182912-63863115e106?crop=entropy&cs=srgb&fm=jpg&q=85",
     tartsDessert:
         "https://images.unsplash.com/photo-1583338917451-face2751d8d5?crop=entropy&cs=srgb&fm=jpg&q=85",
     baristaPour:
@@ -101,7 +102,7 @@ export const MENU_CATEGORIES = [
         id: "cafe",
         label: "Café",
         icon: "coffee",
-        image: IMAGES.realCookies,
+        image: IMAGES.realCafe,
         blurb: "Café recién pasado y espuma como debe ser. Para desayunar o para la pausa de las cinco.",
         note: null,
         groups: [
@@ -149,7 +150,7 @@ export const MENU_CATEGORIES = [
         id: "helados",
         label: "Helados",
         icon: "icecream",
-        image: IMAGES.gelatoBowls,
+        image: IMAGES.realCono,
         blurb: "Helado artesanal batido cada mañana. En cono, tarrina, copa o para llevar a casa.",
         note: null,
         groups: [
@@ -258,22 +259,28 @@ export const MENU_CATEGORIES = [
 
 export const TESTIMONIALS = [
     {
-        name: "María G.",
-        initials: "MG",
+        name: "David Barroeta",
+        initials: "DB",
         stars: 5,
-        text: "Fuimos con los niños después de pasear por El Restón y acertamos de lleno. El helado de tarta de queso está de diez y el trato, como si fuéramos de la familia. Repetiremos seguro.",
+        text: "Muy buen sitio para desayunar o merendar. El café está bien preparado y la comida es fresca y sabrosa, en especial destacan las tostadas y los bocadillos con su pan crujiente. El ambiente es muy cómodo y agradable, ideal para una pausa tranquila. Servicio 10/10 por parte de su personal. Especialmente su camarera Nerea, quien resalta por su personalidad y sonrisa en todo momento. 100 % recomendable.",
     },
     {
-        name: "Javier R.",
-        initials: "JR",
+        name: "Daniel",
+        initials: "D",
         stars: 5,
-        text: "Para mí, el mejor café de Valdemoro. Se nota que cuidan cada detalle y siempre te reciben con una sonrisa. Es nuestro plan fijo de los domingos después de la siesta.",
+        text: "Cafetería nueva en el Centro Comercial El Restón de Valdemoro. Diseño bonito con un montón de mesas y una barra para desayunar o merendar en cualquier momento. Ofrece una carta simplificada pero con cosas muy ricas y hechas con amor, aparte de tener smoothies de frutas riquísimos y la parte de heladería; nosotros probamos las tortitas y la tosta de salmón con queso y aguacate y estaba buenísimo. Recomendable 110 %.",
     },
     {
-        name: "Lucía M.",
-        initials: "LM",
+        name: "Sylvana",
+        initials: "S",
         stars: 5,
-        text: "Cada semana hay un sabor nuevo y siempre aciertan. El de pistacho es adictivo, se lo digo a todo el mundo. La heladería más rica del pueblo, y esto lo firman mis hijos.",
+        text: "Ambiente bastante cómodo. Muy ricas las tortitas Bosque Dulce y el trato de Karellys, Paola y Gonzalo fue excelente. Te atienden súper rápido. Al entrar encontrarás dos amplias vitrinas con mostrador repletas de helados, ¡no sabrás qué escoger!; y otra con bollería, así podrás probar lo que te apetezca con un café. Para aquellos que no son muy golosos, también disponen de productos salados como tostadas y bocadillos. No dejes de visitarla. Muy recomendable.",
+    },
+    {
+        name: "Gabriel Vicente P.",
+        initials: "GV",
+        stars: 5,
+        text: "Excelente calidad y servicio. Gran variedad de dulce y salado. Me gusta el nuevo diseño de la tienda. 10/10.",
     },
 ];
 
@@ -282,6 +289,6 @@ export const GALLERY = [
     { src: IMAGES.baristaPour, alt: "Barista preparando café con arte en la barra", span: "wide" },
     { src: IMAGES.realFood, alt: "Croissant con rúcula y tomate, café con hielo y galletas de Charlotte's", span: "sm" },
     { src: IMAGES.realSalmon, alt: "Tostada de salmón con crema de queso, hecha en el local", span: "sm" },
-    { src: IMAGES.realTostadita, alt: "Tostada de aguacate con huevo cocido, al momento", span: "sm" },
+    { src: IMAGES.realCookies, alt: "Café con galletas de Charlotte's, recién preparado", span: "sm" },
     { src: IMAGES.interiorWarm, alt: "Interior acogedor de la cafetería", span: "wide" },
 ];
