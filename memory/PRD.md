@@ -18,6 +18,7 @@ Crear la estructura completa, el diseño y los textos persuasivos de la web de "
 ## Estado (2026-09-25)
 Implementado y verificado: página completa en español, CTA tel:+34695332060 en nav/hero/contacto/footer/FAB móvil, badge 4,7★·46 reseñas (hero + sección confianza + testimonios), pestañas de menú animadas con 3 categorías y 18 productos sugeridos (etiquetas Top ventas/Sin lactosa/Vegano), 3 testimonios simulados, galería bento con lightbox (tecla Escape), indicador dinámico "Abierto ahora / hasta las 22:00", link a Google Maps, SEO básico (title/meta en español) y favicon SVG.
 Verificado con: curl /api/ OK; capturas desktop 1440 y móvil 390 (hero, menú con cambio de pestaña, galería con lightbox, testimonios, contacto); sin overflow horizontal.
+Actualización (2026-09-25): integradas las 5 fotos reales del cliente (optimizadas ×3 en /public/img): helado en mostrador → héroe; galletas con café → panel Cafés; tortitas → panel Postres; croissant salado y tostada de salmón → galería. Overlay de paneles del menú reforzado para legibilidad sobre foto clara. El resto de imágenes grandes siguen siendo stock hasta recibir fotos reales.
 
 ## Personas
 - Familias de Valdemoro: buscan plan fácil con niños después de las compras o el cine.

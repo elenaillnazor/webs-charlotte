@@ -169,8 +169,8 @@ const Hero = () => {
                             className="absolute -left-4 sm:-left-10 bottom-2 w-40 sm:w-48 rotate-[-6deg] overflow-hidden rounded-2xl border-[5px] border-paper shadow-[0_24px_48px_-16px_rgba(43,27,23,0.4)]"
                         >
                             <img
-                                src={IMAGES.heroCone}
-                                alt="Cono de helado de fresa"
+                                src={IMAGES.realIcecream}
+                                alt="Cono de helado artesanal servido en la barra de Charlotte's"
                                 className="w-full h-36 sm:h-44 object-cover"
                                 data-testid="hero-secondary-image"
                             />

@@ -82,7 +82,7 @@ const MenuSection = () => {
                                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
                                 data-testid="menu-category-image"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-espresso/85 via-espresso/20 to-transparent" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-espresso/90 via-espresso/45 to-transparent" />
                             <div className="absolute bottom-0 p-7">
                                 <h3 className="font-display text-2xl md:text-3xl font-bold text-cream">
                                     {category.label}

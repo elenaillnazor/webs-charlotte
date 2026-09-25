@@ -19,28 +19,21 @@ export const BUSINESS = {
 export const IMAGES = {
     heroGelato:
         "https://images.unsplash.com/photo-1648971413826-8377e3c65039?crop=entropy&cs=srgb&fm=jpg&q=85",
-    heroCone:
-        "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?crop=entropy&cs=srgb&fm=jpg&q=85",
+    realIcecream: "/img/icecream.jpg",
+    realCookies: "/img/cookies.jpg",
+    realTortitas: "/img/tortitas.jpg",
+    realFood: "/img/food.jpg",
+    realSalmon: "/img/salmon.jpg",
     gelatoBowls:
         "https://images.unsplash.com/photo-1629385744299-74b9cf013f52?crop=entropy&cs=srgb&fm=jpg&q=85",
-    coffeeLatte:
-        "https://images.unsplash.com/photo-1686315715890-9083c5c5c861?crop=entropy&cs=srgb&fm=jpg&q=85",
     pastryDisplay:
         "https://images.unsplash.com/photo-1534432182912-63863115e106?crop=entropy&cs=srgb&fm=jpg&q=85",
-    tartsDessert:
-        "https://images.unsplash.com/photo-1583338917451-face2751d8d5?crop=entropy&cs=srgb&fm=jpg&q=85",
     baristaPour:
         "https://images.unsplash.com/photo-1517701848373-805868efd0ac?crop=entropy&cs=srgb&fm=jpg&q=85",
     interiorWarm:
         "https://images.unsplash.com/photo-1645677020082-721a854c24f2?crop=entropy&cs=srgb&fm=jpg&q=85",
     interiorBright:
         "https://images.unsplash.com/photo-1621343607959-5d11ff0f1e39?crop=entropy&cs=srgb&fm=jpg&q=85",
-    conesSprinkles:
-        "https://images.unsplash.com/photo-1629385701021-fcd568a743e8?crop=entropy&cs=srgb&fm=jpg&q=85",
-    brownieSundae:
-        "https://images.unsplash.com/photo-1606884285898-277317a7bf12?crop=entropy&cs=srgb&fm=jpg&q=85",
-    caramelSundae:
-        "https://images.unsplash.com/photo-1551024506-0bccd828d307?crop=entropy&cs=srgb&fm=jpg&q=85",
 };
 
 export const NAV_LINKS = [
@@ -105,7 +98,7 @@ export const MENU_CATEGORIES = [
         id: "cafes",
         label: "Cafés de Especialidad",
         icon: "coffee",
-        image: IMAGES.coffeeLatte,
+        image: IMAGES.realCookies,
         blurb:
             "Café recién pasado, leche templada y espuma como debe ser. Para desayunar, para la pausa de las cinco o para alargar la sobremesa.",
         items: [
@@ -145,7 +138,7 @@ export const MENU_CATEGORIES = [
         id: "postres",
         label: "Postres & Repostería",
         icon: "cake",
-        image: IMAGES.brownieSundae,
+        image: IMAGES.realTortitas,
         blurb:
             "Repostería hecha en casa para terminar (o empezar) con una sonrisa. Pregunta por el postre del día, nunca sabemos qué saldrá.",
         items: [
@@ -207,8 +200,8 @@ export const TESTIMONIALS = [
 export const GALLERY = [
     { src: IMAGES.gelatoBowls, alt: "Bolas de helado artesanal servidas en copa", span: "lg" },
     { src: IMAGES.baristaPour, alt: "Barista preparando café con arte en la barra", span: "wide" },
-    { src: IMAGES.conesSprinkles, alt: "Conos de helado con fritas de colores", span: "sm" },
-    { src: IMAGES.caramelSundae, alt: "Sundae con caramelo caliente", span: "sm" },
+    { src: IMAGES.realFood, alt: "Croissant con rúcula y tomate, café con hielo y galletas de Charlotte's", span: "sm" },
+    { src: IMAGES.realSalmon, alt: "Tostada de salmón con crema de queso, hecha en el local", span: "sm" },
     { src: IMAGES.pastryDisplay, alt: "Vitrina de repostería y ambiente del local", span: "sm" },
     { src: IMAGES.interiorWarm, alt: "Interior acogedor de la cafetería", span: "wide" },
 ];
