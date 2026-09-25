@@ -6,6 +6,8 @@ export const BUSINESS = {
     reviewsCount: 46,
     phoneDisplay: "695 33 20 60",
     phoneHref: "tel:+34695332060",
+    instagramUrl: "https://www.instagram.com/charlottes.coffee.icecream/?hl=es",
+    instagramHandle: "@charlottes.coffee.icecream",
     addressLine1: "Av. del Mar Mediterráneo, 3, Local 54",
     addressLine2: "Centro Comercial El Restón",
     addressLine3: "28341 Valdemoro, Madrid",
@@ -17,8 +19,9 @@ export const BUSINESS = {
 };
 
 export const IMAGES = {
-    heroGelato:
-        "https://images.unsplash.com/photo-1648971413826-8377e3c65039?crop=entropy&cs=srgb&fm=jpg&q=85",
+    realVitrina: "/img/vitrina.jpg",
+    realLocal: "/img/local.jpg",
+    realTostadita: "/img/tostadita.jpg",
     realIcecream: "/img/icecream.jpg",
     realCookies: "/img/cookies.jpg",
     realTortitas: "/img/tortitas.jpg",
@@ -28,12 +31,12 @@ export const IMAGES = {
         "https://images.unsplash.com/photo-1629385744299-74b9cf013f52?crop=entropy&cs=srgb&fm=jpg&q=85",
     pastryDisplay:
         "https://images.unsplash.com/photo-1534432182912-63863115e106?crop=entropy&cs=srgb&fm=jpg&q=85",
+    tartsDessert:
+        "https://images.unsplash.com/photo-1583338917451-face2751d8d5?crop=entropy&cs=srgb&fm=jpg&q=85",
     baristaPour:
         "https://images.unsplash.com/photo-1517701848373-805868efd0ac?crop=entropy&cs=srgb&fm=jpg&q=85",
     interiorWarm:
         "https://images.unsplash.com/photo-1645677020082-721a854c24f2?crop=entropy&cs=srgb&fm=jpg&q=85",
-    interiorBright:
-        "https://images.unsplash.com/photo-1621343607959-5d11ff0f1e39?crop=entropy&cs=srgb&fm=jpg&q=85",
 };
 
 export const NAV_LINKS = [
@@ -46,131 +49,208 @@ export const NAV_LINKS = [
 
 export const MARQUEE_ITEMS = [
     "Helados artesanales de temporada",
+    "Bocadillos y tostadas hechas al momento",
     "Café de especialidad",
-    "Tartas y postres caseros",
-    "Crepes, gofres y batidos",
-    "Copa Charlotte, la de la casa",
+    "Tortitas, gofres y brownies",
+    "Dulce Moment, nuestra tortita de autor",
     "El plan favorito de las familias",
 ];
 
 export const MENU_CATEGORIES = [
     {
-        id: "helados",
-        label: "Helados Artesanales",
-        icon: "icecream",
-        image: IMAGES.gelatoBowls,
-        blurb:
-            "Batimos helado cada mañana con leche fresca y fruta de verdad. Pídelo en cono de gofre, tarrina o en copa grande para compartir.",
-        items: [
+        id: "bocadillos",
+        label: "Bocadillos",
+        icon: "sandwich",
+        image: IMAGES.realFood,
+        blurb: "Bocadillos recién hechos con pan crujiente y producto de verdad. Perfectos para compartir después de las compras.",
+        note: null,
+        groups: [
             {
-                name: "Tarta de Queso con Frutos Rojos",
-                desc: "Nuestro sabor estrella: cremoso, dulce y con toque ácido.",
-                tags: ["Top ventas"],
-            },
-            {
-                name: "Pistacho Siciliano",
-                desc: "Intenso y adictivo, el favorito de los que prueban una vez.",
-                tags: ["Top ventas"],
-            },
-            {
-                name: "Chocolate 70% Belga",
-                desc: "Para los que aman el cacao de verdad, sin trampas.",
-                tags: [],
-            },
-            {
-                name: "Dulce de Leche Caramelizado",
-                desc: "Como el de la sobremesa de casa, pero bien frío.",
-                tags: [],
-            },
-            {
-                name: "Frutas del Bosque",
-                desc: "Fresquito y afrutado, el preferido de los peques.",
-                tags: ["Sin lactosa"],
-            },
-            {
-                name: "Mango y Maracuyá",
-                desc: "Sorbete tropical 100% vegetal, puro verano.",
-                tags: ["Vegano"],
+                subtitle: null,
+                items: [
+                    { name: "Salmón y rúcula", desc: "Queso crema, rúcula, salmón y huevo cocido", price: "7,00 €" },
+                    { name: "Pastrami Bistró", desc: "Rúcula, pimientos, pastrami y salsa especial", price: "8,50 €" },
+                    { name: "Castizo", desc: "Chorizo, bacon y tomate", price: "6,00 €" },
+                    { name: "Atún mediterráneo", desc: "Atún, aguacate y tomate cherry", price: "5,50 €" },
+                    { name: "Tortilla", desc: "Tortilla de patata y mayonesa", price: "4,50 €" },
+                ],
             },
         ],
     },
     {
-        id: "cafes",
-        label: "Cafés de Especialidad",
+        id: "salado",
+        label: "Salado",
+        icon: "croissant",
+        image: IMAGES.realSalmon,
+        blurb: "Nuestros salados, servidos en pan croissant dorado y crujiente.",
+        note: null,
+        groups: [
+            {
+                subtitle: null,
+                items: [
+                    { name: "Veggie", desc: "Atún, lechuga, tomate y mayonesa", price: "5,00 €" },
+                    { name: "Mixto", desc: "Jamón york y queso fundido", price: "4,00 €" },
+                    { name: "Mixto con huevo", desc: "Jamón york, queso fundido y huevo", price: "4,70 €" },
+                    { name: "Ibérico", desc: "Jamón serrano y queso", price: "4,50 €" },
+                    { name: "Nórdico", desc: "Salmón, queso crema y rúcula", price: "6,00 €" },
+                ],
+            },
+        ],
+    },
+    {
+        id: "cafe",
+        label: "Café",
         icon: "coffee",
         image: IMAGES.realCookies,
-        blurb:
-            "Café recién pasado, leche templada y espuma como debe ser. Para desayunar, para la pausa de las cinco o para alargar la sobremesa.",
-        items: [
+        blurb: "Café recién pasado y espuma como debe ser. Para desayunar o para la pausa de las cinco.",
+        note: null,
+        groups: [
             {
-                name: "Espresso de la Casa",
-                desc: "Corto, con cuerpo y crema avellana.",
-                tags: [],
+                subtitle: "Clásicos",
+                items: [
+                    { name: "Espresso / Solo", desc: null, price: "1,50 €" },
+                    { name: "Café con leche", desc: "Normal · Grande", price: "1,80 € · 2,00 €" },
+                    { name: "Doble espresso", desc: null, price: "2,00 €" },
+                    { name: "Colacao / Nesquik", desc: null, price: "2,20 €" },
+                    { name: "Té o infusión", desc: null, price: "2,00 €" },
+                    { name: "Té inglés", desc: null, price: "2,40 €" },
+                ],
             },
             {
-                name: "Cappuccino",
-                desc: "Espuma sedosa con un toque de cacao.",
-                tags: ["Top ventas"],
-            },
-            {
-                name: "Latte de Vainilla o Caramelo",
-                desc: "Suave, dulce y muy fotogénico.",
-                tags: [],
-            },
-            {
-                name: "Café con Leche de la Casa",
-                desc: "El de siempre, servido calentito en taza grande.",
-                tags: [],
-            },
-            {
-                name: "Frappé de Café con Nata",
-                desc: "Batido frío con hielo, ideal para la tarde.",
-                tags: [],
-            },
-            {
-                name: "Chocolate Caliente Casero",
-                desc: "Espeso, a la taza, con trocitos de chocolate.",
-                tags: ["Top ventas"],
+                subtitle: "Especialidades",
+                items: [
+                    { name: "Cappuccino", desc: null, price: "2,30 €" },
+                    { name: "Vienés", desc: null, price: "2,30 €" },
+                    { name: "Bombón", desc: null, price: "2,30 €" },
+                    { name: "Affogato", desc: null, price: "3,80 €" },
+                ],
             },
         ],
     },
     {
-        id: "postres",
-        label: "Postres & Repostería",
+        id: "dulce",
+        label: "Dulce",
         icon: "cake",
         image: IMAGES.realTortitas,
-        blurb:
-            "Repostería hecha en casa para terminar (o empezar) con una sonrisa. Pregunta por el postre del día, nunca sabemos qué saldrá.",
-        items: [
+        blurb: "Tortitas, gofres y brownies recién hechos. El final perfecto (o el principio).",
+        note: "Añade helado a tus dulces por solo 2 € · Hazlo menú por solo 1 €",
+        groups: [
             {
-                name: "Brownie Tibio con Helado",
-                desc: "Caliente, crujiente por fuera y con bola de vainilla.",
-                tags: ["Top ventas"],
+                subtitle: null,
+                items: [
+                    { name: "Tortitas", desc: "Con sirope y nata", price: "4,10 €" },
+                    { name: "Gofres", desc: "Con sirope y nata", price: "3,95 €" },
+                    { name: "Brownie", desc: "Con sirope y nata", price: "3,20 €" },
+                ],
+            },
+        ],
+    },
+    {
+        id: "helados",
+        label: "Helados",
+        icon: "icecream",
+        image: IMAGES.gelatoBowls,
+        blurb: "Helado artesanal batido cada mañana. En cono, tarrina, copa o para llevar a casa.",
+        note: null,
+        groups: [
+            {
+                subtitle: "Cono o tarrina",
+                items: [
+                    { name: "1 bola", desc: null, price: "3,20 €" },
+                    { name: "2 bolas", desc: null, price: "5,20 €" },
+                    { name: "3 bolas", desc: null, price: "7,00 €" },
+                ],
             },
             {
-                name: "Copa Charlotte",
-                desc: "La copa de la casa: tres bolas, nata y nuestros toppings.",
-                tags: ["Top ventas"],
+                subtitle: "Copas de helado",
+                items: [
+                    { name: "Copa de 2 bolas", desc: "Con 2 toppings", price: "6,20 €" },
+                    { name: "Copa de 3 bolas", desc: "Con 3 toppings", price: "8,00 €" },
+                ],
             },
             {
-                name: "Crepes de Chocolate y Plátano",
-                desc: "Finitas, calentitas y muy compartibles.",
-                tags: [],
+                subtitle: "Para llevar",
+                items: [
+                    { name: "Medio litro", desc: null, price: "12,00 €" },
+                    { name: "1 litro", desc: null, price: "19,00 €" },
+                ],
             },
             {
-                name: "Gofre Artesanal",
-                desc: "Crujiente, con nata montada y sirope templado.",
-                tags: [],
+                subtitle: "Extras",
+                items: [
+                    { name: "Toppings", desc: "Elige tus favoritos", price: "+0,25 €" },
+                    { name: "Cono de chocolate", desc: "Sustituye tu cono", price: "+0,60 €" },
+                ],
+            },
+        ],
+    },
+    {
+        id: "bebidas",
+        label: "Bebidas",
+        icon: "cup",
+        image: null,
+        blurb: "Para acompañar cualquier momento: frescas, frías y bien servidas.",
+        note: null,
+        groups: [
+            {
+                subtitle: null,
+                items: [
+                    { name: "Agua pequeña", desc: null, price: "1,40 €" },
+                    { name: "Agua grande", desc: null, price: "2,40 €" },
+                    { name: "Zumo de naranja", desc: "Pequeño · Grande", price: "2,00 € · 3,00 €" },
+                    { name: "Batidos y zumos bote", desc: null, price: "2,00 €" },
+                    { name: "Tercio de cerveza", desc: null, price: "2,70 €" },
+                    { name: "Tinto de verano", desc: null, price: "2,50 €" },
+                    { name: "Granizados", desc: null, price: "3,80 €" },
+                    { name: "Frappé de café", desc: null, price: "5,20 €" },
+                    { name: "Milkshakes", desc: "1 o 2 sabores + sirope + nata", price: "5,20 €" },
+                    { name: "Smoothies", desc: null, price: "5,00 €" },
+                ],
+            },
+        ],
+    },
+    {
+        id: "dulce-moment",
+        label: "Dulce Moment",
+        icon: "sparkles",
+        image: IMAGES.tartsDessert,
+        blurb: "Nuestras tortitas de autor, las que hacen que la gente vuelva de una semana para otra.",
+        note: "Hazlo menú por solo 1 € más",
+        groups: [
+            {
+                subtitle: null,
+                items: [
+                    { name: "La Clásica", desc: "Tortitas, sirope a elegir, nata y fresas frescas", price: "4,90 €" },
+                    { name: "Choco Banana", desc: "Tortitas, sirope de chocolate, nata y plátano", price: "4,90 €" },
+                    { name: "Bosque Dulce", desc: "Tortitas, sirope, frutos rojos y azúcar glass", price: "4,90 €" },
+                    { name: "Fresh & Light", desc: "Tortitas, fresa, plátano y un toque de miel", price: "4,90 €" },
+                ],
+            },
+        ],
+    },
+    {
+        id: "tostadas",
+        label: "Tostadas",
+        icon: "wheat",
+        image: IMAGES.realTostadita,
+        blurb: "Tostadas hechas al momento, tan simples y tan buenas como deben ser.",
+        note: "Clásicas disponibles hasta las 12:30 h · Hazlo menú por solo 1 € más",
+        groups: [
+            {
+                subtitle: "Clásicas",
+                items: [
+                    { name: "Tomate + aceite de oliva", desc: null, price: "2,10 €" },
+                    { name: "Mantequilla + mermelada", desc: null, price: "2,10 €" },
+                ],
             },
             {
-                name: "Tarta de la Abuela",
-                desc: "La de galleta y crema, como manda la tradición.",
-                tags: [],
-            },
-            {
-                name: "Affogato al Caffè",
-                desc: "Helado de vainilla ahogado en espresso caliente.",
-                tags: [],
+                subtitle: "Especiales",
+                items: [
+                    { name: "Salmón", desc: "Salmón, queso crema y eneldo", price: "4,50 €" },
+                    { name: "Atún", desc: "Atún, tomate cherry y aceite de oliva", price: "3,50 €" },
+                    { name: "Aguacate", desc: "Aguacate y huevo cocido", price: "3,50 €" },
+                    { name: "Hummus", desc: "Hummus y tomate cherry", price: "3,00 €" },
+                ],
             },
         ],
     },
@@ -202,6 +282,6 @@ export const GALLERY = [
     { src: IMAGES.baristaPour, alt: "Barista preparando café con arte en la barra", span: "wide" },
     { src: IMAGES.realFood, alt: "Croissant con rúcula y tomate, café con hielo y galletas de Charlotte's", span: "sm" },
     { src: IMAGES.realSalmon, alt: "Tostada de salmón con crema de queso, hecha en el local", span: "sm" },
-    { src: IMAGES.pastryDisplay, alt: "Vitrina de repostería y ambiente del local", span: "sm" },
+    { src: IMAGES.realTostadita, alt: "Tostada de aguacate con huevo cocido, al momento", span: "sm" },
     { src: IMAGES.interiorWarm, alt: "Interior acogedor de la cafetería", span: "wide" },
 ];

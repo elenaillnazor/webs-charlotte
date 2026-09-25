@@ -157,8 +157,8 @@ const Hero = () => {
                     >
                         <div className="absolute inset-x-6 top-0 bottom-14 overflow-hidden rounded-t-[999px] rounded-b-[36px] shadow-[0_40px_80px_-30px_rgba(43,27,23,0.45)] border-[6px] border-paper">
                             <img
-                                src={IMAGES.heroGelato}
-                                alt="Helado artesanal de Charlotte's Coffee & Ice Cream"
+                                src={IMAGES.realVitrina}
+                                alt="Vitrina de helados artesanales de Charlotte's Coffee & Ice Cream"
                                 className="w-full h-full object-cover"
                                 data-testid="hero-main-image"
                             />

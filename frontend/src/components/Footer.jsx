@@ -1,4 +1,4 @@
-import { Phone, MapPin, Clock } from "lucide-react";
+import { Phone, MapPin, Clock, Instagram } from "lucide-react";
 import { Logo } from "./Logo";
 import { NAV_LINKS, BUSINESS } from "../data/content";
 import { scrollToId } from "../lib/scroll";
@@ -14,6 +14,16 @@ const Footer = () => (
                         batidos cada mañana, café de especialidad y postres
                         caseros para compartir con quien más quieres.
                     </p>
+                    <a
+                        data-testid="footer-instagram-link"
+                        href={BUSINESS.instagramUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-6 inline-flex items-center gap-2.5 rounded-full border border-cream/25 px-5 py-3 text-sm font-semibold text-cream transition-all duration-300 hover:border-amber hover:text-amber"
+                    >
+                        <Instagram size={16} />
+                        {BUSINESS.instagramHandle}
+                    </a>
                 </div>
                 <div>
                     <p className="text-xs font-semibold tracking-[0.28em] uppercase text-amber">

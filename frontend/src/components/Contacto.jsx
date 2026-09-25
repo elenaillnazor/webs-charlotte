@@ -1,4 +1,4 @@
-import { Phone, MapPin, Clock, Navigation } from "lucide-react";
+import { Phone, MapPin, Clock, Navigation, Instagram } from "lucide-react";
 import { Reveal, Eyebrow } from "./Reveal";
 import { BUSINESS, IMAGES } from "../data/content";
 
@@ -106,13 +106,23 @@ const Contacto = () => (
                             >
                                 <Navigation size={16} /> Cómo llegar
                             </a>
+                            <a
+                                data-testid="contact-instagram-link"
+                                href={BUSINESS.instagramUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Síguenos en Instagram"
+                                className="inline-flex items-center gap-2.5 rounded-full border border-cream/25 px-5 py-4 font-semibold text-cream transition-all duration-300 hover:bg-cream/10 active:scale-95"
+                            >
+                                <Instagram size={16} /> Instagram
+                            </a>
                         </div>
                     </div>
 
                     <div className="relative min-h-[340px] lg:min-h-0">
                         <img
-                            src={IMAGES.interiorBright}
-                            alt="Interior acogedor de Charlotte's Coffee & Ice Cream"
+                            src={IMAGES.realLocal}
+                            alt="Fachada y terraza de Charlotte's Coffee & Ice Cream en el Centro Comercial El Restón"
                             className="absolute inset-0 w-full h-full object-cover"
                             data-testid="contact-image"
                         />

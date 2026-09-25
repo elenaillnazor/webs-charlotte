@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Phone, Menu as MenuIcon, X } from "lucide-react";
+import { Phone, Menu as MenuIcon, X, Instagram } from "lucide-react";
 import { Logo } from "./Logo";
 import { NAV_LINKS, BUSINESS } from "../data/content";
 import { scrollToId } from "../lib/scroll";
@@ -49,6 +49,16 @@ const Navbar = () => {
                     </nav>
                     <div className="flex items-center gap-3">
                         <a
+                            data-testid="nav-instagram-link"
+                            href={BUSINESS.instagramUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Instagram de Charlotte's Coffee & Ice Cream"
+                            className="hidden lg:inline-flex items-center justify-center w-11 h-11 rounded-full border border-line bg-paper/80 text-espresso transition-all duration-300 hover:border-amber hover:text-amber hover:scale-105"
+                        >
+                            <Instagram size={18} />
+                        </a>
+                        <a
                             data-testid="nav-call-button"
                             href={BUSINESS.phoneHref}
                             className="hidden sm:inline-flex items-center gap-2.5 rounded-full bg-espresso text-cream pl-4 pr-5 py-2.5 text-sm font-semibold transition-all duration-300 hover:bg-amber hover:scale-[1.03] active:scale-95 shadow-[0_10px_24px_-10px_rgba(43,27,23,0.5)]"
@@ -93,6 +103,16 @@ const Navbar = () => {
                             className="mt-4 inline-flex items-center justify-center gap-2.5 rounded-full bg-amber text-cream py-4 font-semibold"
                         >
                             <Phone size={17} /> Llamar al {BUSINESS.phoneDisplay}
+                        </a>
+                        <a
+                            data-testid="mobile-menu-instagram-link"
+                            href={BUSINESS.instagramUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center gap-2.5 rounded-full border border-line bg-cream py-3.5 font-semibold text-espresso"
+                        >
+                            <Instagram size={17} className="text-amber" />
+                            {BUSINESS.instagramHandle}
                         </a>
                     </motion.div>
                 )}
