@@ -1,0 +1,135 @@
+{
+  "project_title": "Charlotte's Coffee & Ice Cream - Landing Page & Design System Guidelines",
+  "app_type": "marketing_site",
+  "language": "es",
+  "brand_identity": {
+    "name": "Charlotte's Coffee & Ice Cream",
+    "location": "Centro Comercial El Restón, Valdemoro, Madrid",
+    "full_address": "Av. del Mar Mediterráneo, 3, Local 54, Centro Comercial El Restón, 28341 Valdemoro, Madrid",
+    "phone": "695 33 20 60",
+    "phone_tel_href": "tel:+34695332060",
+    "hours": "Lunes a Domingo: 09:00 - 22:00 (Abierto todos los días hasta las 22:00)",
+    "rating_badge": {
+      "rating": "4,7",
+      "reviews_count": 46,
+      "text": "Uno de los locales mejor valorados de Valdemoro"
+    },
+    "tone": "Acogedor, artesanal, familiar, apetecible y premium"
+  },
+  "color_palette": {
+    "archetype": "ORGANIC & WARM ARTISANAL (Crema, Vanilla, Café, Chocolate & Terracota)",
+    "background_primary": "#FAF6F0",
+    "background_secondary": "#F3ECE1",
+    "surface_card": "#FFFFFF",
+    "surface_dark": "#2B1B17",
+    "text_primary": "#2C1D18",
+    "text_secondary": "#6E5B52",
+    "text_muted": "#9C897E",
+    "brand_amber": "#C87D48",
+    "brand_espresso": "#3D2319",
+    "brand_cream": "#F9F3EA",
+    "brand_gold": "#D4AF37",
+    "accent_strawberry": "#D95D55",
+    "border_subtle": "#E7DDD2"
+  },
+  "typography": {
+    "heading_font": "Playfair Display / Serif (Fallback: Georgia, serif)",
+    "body_font": "Outfit / Plus Jakarta Sans (Fallback: system-ui, sans-serif)",
+    "accent_font": "Satisfy / Caveat / Cursive",
+    "heading_rules": "Large scale, expressive, tight letter spacing tracking-tight, rich espresso color",
+    "eyebrow_rules": "Uppercase, tracking-[0.2em], text-xs, text-amber font-semibold"
+  },
+  "key_sections": [
+    {
+      "id": "hero",
+      "name": "Hero Principal",
+      "features": [
+        "Kinetic line-by-line headline reveal with Framer Motion",
+        "Subtly animated floating decorative badges (4,7 ★ Google Trust)",
+        "Primary CTA button: 'Llamar al 695 33 20 60' with phone icon and direct tel: link",
+        "Secondary CTA: 'Ver Carta Artesanal' smooth scroll to menu",
+        "Editorial marquee ticker below hero featuring seasonal flavors and craft coffee notes"
+      ]
+    },
+    {
+      "id": "trust_bar",
+      "name": "Barra de Confianza & Historia Local",
+      "features": [
+        "Highlighting 4,7 stars over 46 reviews in Valdemoro",
+        "Stat cards with micro-hover lift",
+        "Mention of Centro Comercial El Restón"
+      ]
+    },
+    {
+      "id": "menu",
+      "name": "Nuestra Carta Artesanal (Menú)",
+      "categories": [
+        { "id": "helados", "label": "Helados Artesanales", "icon": "IceCream" },
+        { "id": "cafes", "label": "Cafés de Especialidad", "icon": "Coffee" },
+        { "id": "postres", "label": "Postres & Repostería", "icon": "Cake" }
+      ],
+      "features": [
+        "Interactive tab switching with smooth layout transitions",
+        "Dietary indicators (Sin gluten, Vegano, Top Ventas)",
+        "Appetizing product grid with image zoom effect on hover"
+      ]
+    },
+    {
+      "id": "galeria",
+      "name": "Galería de Fotos del Local y Productos",
+      "features": [
+        "Bento style asymmetrical photography grid",
+        "Modal lightbox zoom when clicking any photo",
+        "Filters for 'Ambiente', 'Helados', 'Cafetería'"
+      ]
+    },
+    {
+      "id": "testimonios",
+      "name": "Reseñas & Opiniones de Nuestros Clientes",
+      "features": [
+        "Cards simulating Google 4,7 star reviews",
+        "Reviewer avatars, star ratings, and authentic local quotes from Valdemoro families & neighbors"
+      ]
+    },
+    {
+      "id": "contacto_ubicacion",
+      "name": "Contacto, Horarios y Ubicación",
+      "features": [
+        "Highlight: 'Abierto hoy hasta las 22:00'",
+        "Full address with direct Google Maps link button",
+        "Interactive phone action callout",
+        "CC El Restón location callout with parking & accessibility details"
+      ]
+    }
+  ],
+  "image_urls": {
+    "hero_bg": "https://images.unsplash.com/photo-1680381724318-c8ac9fe3a484?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHwzfHxzcGVjaWFsdHklMjBjb2ZmZWUlMjBlc3ByZXNzbyUyMGxhdHRlJTIwYXJ0JTIwY296eSUyMGNhZmV8ZW58MHx8fHwxNzkwMzU0Mjk5fDA&ixlib=rb-4.1.0&q=85",
+    "gelato_display": "https://images.unsplash.com/photo-1648971413826-8377e3c65039?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHw0fHxhcnRpc2FuYWwlMjBpY2UlMjBjcmVhbSUyMGdlbGF0byUyMGNvbG9yZnVsJTIwZGVsaWNpb3VzJTIwc2Nvb3B8ZW58MHx8fHwxNzkwMzU0Mjk5fDA&ixlib=rb-4.1.0&q=85",
+    "gelato_bowls": "https://images.unsplash.com/photo-1629385744299-74b9cf013f52?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwyfHxhcnRpc2FuYWwlMjBpY2UlMjBjcmVhbSUyMGdlbGF0byUyMGNvbG9yZnVsJTIwZGVsaWNpb3VzJTIwc2Nvb3B8ZW58MHx8fHwxNzkwMzU0Mjk5fDA&ixlib=rb-4.1.0&q=85",
+    "coffee_latte": "https://images.unsplash.com/photo-1686315715890-9083c5c5c861?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHwxfHxzcGVjaWFsdHklMjBjb2ZmZWUlMjBlc3ByZXNzbyUyMGxhdHRlJTIwYXJ0JTIwY296eSUyMGNhZmV8ZW58MHx8fHwxNzkwMzU0Mjk5fDA&ixlib=rb-4.1.0&q=85",
+    "pastry_display": "https://images.unsplash.com/photo-1534432182912-63863115e106?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwyfHxnb3VybWV0JTIwcGFzdHJ5JTIwYmFrZXJ5JTIwZGVzc2VydHMlMjBjb3p5JTIwaW50ZXJpb3J8ZW58MHx8fHwxNzkwMzU0Mjk5fDA&ixlib=rb-4.1.0&q=85",
+    "tarts_dessert": "https://images.unsplash.com/photo-1583338917451-face2751d8d5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwxfHxnb3VybWV0JTIwcGFzdHJ5JTIwYmFrZXJ5JTIwZGVzc2VydHMlMjBjb3p5JTIwaW50ZXJpb3J8ZW58MHx8fHwxNzkwMzU0Mjk5fDA&ixlib=rb-4.1.0&q=85"
+  },
+  "testing_and_data_attributes": {
+    "rule": "Every interactive, link, button, section, tab, phone link, and key statistic MUST contain a clear data-testid attribute in kebab-case.",
+    "examples": [
+      "data-testid='hero-call-button'",
+      "data-testid='nav-link-menu'",
+      "data-testid='rating-badge'",
+      "data-testid='menu-category-helados'",
+      "data-testid='menu-item-card'",
+      "data-testid='gallery-image-0'",
+      "data-testid='contact-phone-link'",
+      "data-testid='hours-highlight'"
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Build a single-page app with sticky top navigation and section scrolling.",
+    "Use warm artisanal cream & espresso color scheme. Avoid harsh tech cold colors.",
+    "Include an SVG replaced logo for Charlotte's Coffee & Ice Cream.",
+    "Ensure click-to-call functionality links to tel:+34695332060.",
+    "Prominently highlight the 4.7 stars based on 46 reviews and open status until 22:00.",
+    "Use Framer Motion for scroll reveals and kinetic text transitions.",
+    "Provide responsive layouts for mobile and desktop screens."
+  ]
+}
