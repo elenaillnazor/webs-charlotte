@@ -10,6 +10,8 @@ from typing import List
 import uuid
 from datetime import datetime, timezone
 
+import httpx
+
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
@@ -65,6 +67,40 @@ async def get_status_checks():
             check['timestamp'] = datetime.fromisoformat(check['timestamp'])
     
     return status_checks
+
+@api_router.get("/google-reviews")
+async def google_reviews():
+    api_key = os.environ.get('GOOGLE_PLACES_API_KEY', '').strip()
+    place_id = os.environ.get('GOOGLE_PLACE_ID', '').strip()
+    if not api_key or not place_id:
+        return {"configured": False}
+
+    field_mask = ",".join([
+        "id", "displayName", "formattedAddress", "rating",
+        "userRatingCount", "googleMapsUri",
+    ])
+    try:
+        async with httpx.AsyncClient(timeout=8.0) as client:
+            response = await client.get(
+                f"https://places.googleapis.com/v1/places/{place_id}",
+                headers={
+                    "X-Goog-Api-Key": api_key,
+                    "X-Goog-FieldMask": field_mask,
+                },
+                params={"languageCode": "es", "regionCode": "ES"},
+            )
+        response.raise_for_status()
+        place = response.json()
+        return {
+            "configured": True,
+            "name": (place.get("displayName") or {}).get("text"),
+            "address": place.get("formattedAddress"),
+            "rating": place.get("rating"),
+            "userRatingCount": place.get("userRatingCount"),
+            "googleMapsUri": place.get("googleMapsUri"),
+        }
+    except Exception:
+        return {"configured": False, "error": "google_places_unavailable"}
 
 # Include the router in the main app
 app.include_router(api_router)

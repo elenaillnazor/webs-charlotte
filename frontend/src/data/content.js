@@ -30,10 +30,13 @@ export const IMAGES = {
     realSalmon: "/img/salmon.jpg",
     realCafe: "/img/cafe.jpg",
     realCono: "/img/cono.jpg",
+    realBocadillo: "/img/bocadillo.jpg",
     gelatoBowls:
         "https://images.unsplash.com/photo-1629385744299-74b9cf013f52?crop=entropy&cs=srgb&fm=jpg&q=85",
     tartsDessert:
         "https://images.unsplash.com/photo-1583338917451-face2751d8d5?crop=entropy&cs=srgb&fm=jpg&q=85",
+    caramelSundae:
+        "https://images.unsplash.com/photo-1551024506-0bccd828d307?crop=entropy&cs=srgb&fm=jpg&q=85",
     baristaPour:
         "https://images.unsplash.com/photo-1517701848373-805868efd0ac?crop=entropy&cs=srgb&fm=jpg&q=85",
     interiorWarm:
@@ -45,6 +48,7 @@ export const NAV_LINKS = [
     { id: "carta", label: "Nuestra Carta" },
     { id: "galeria", label: "Galería" },
     { id: "opiniones", label: "Opiniones" },
+    { id: "encargos", label: "Encargos" },
     { id: "contacto", label: "Contacto" },
 ];
 
@@ -62,7 +66,7 @@ export const MENU_CATEGORIES = [
         id: "bocadillos",
         label: "Bocadillos",
         icon: "sandwich",
-        image: IMAGES.realFood,
+        image: IMAGES.realBocadillo,
         blurb: "Bocadillos recién hechos con pan crujiente y producto de verdad. Perfectos para compartir después de las compras.",
         note: null,
         groups: [
@@ -82,9 +86,9 @@ export const MENU_CATEGORIES = [
         id: "salado",
         label: "Salado",
         icon: "croissant",
-        image: IMAGES.realSalmon,
-        blurb: "Nuestros salados, servidos en pan croissant dorado y crujiente.",
-        note: null,
+        image: IMAGES.realFood,
+        blurb: "Todos nuestros salados se sirven en pan de croissant, dorado y crujiente.",
+        note: "Todos nuestros salados son en croissant",
         groups: [
             {
                 subtitle: null,
@@ -233,7 +237,7 @@ export const MENU_CATEGORIES = [
         id: "tostadas",
         label: "Tostadas",
         icon: "wheat",
-        image: IMAGES.realTostadita,
+        image: IMAGES.realSalmon,
         blurb: "Tostadas hechas al momento, tan simples y tan buenas como deben ser.",
         note: "Clásicas disponibles hasta las 12:30 h · Hazlo menú por solo 1 € más",
         groups: [
@@ -287,8 +291,8 @@ export const TESTIMONIALS = [
 export const GALLERY = [
     { src: IMAGES.gelatoBowls, alt: "Bolas de helado artesanal servidas en copa", span: "lg" },
     { src: IMAGES.baristaPour, alt: "Barista preparando café con arte en la barra", span: "wide" },
-    { src: IMAGES.realFood, alt: "Croissant con rúcula y tomate, café con hielo y galletas de Charlotte's", span: "sm" },
-    { src: IMAGES.realSalmon, alt: "Tostada de salmón con crema de queso, hecha en el local", span: "sm" },
+    { src: IMAGES.caramelSundae, alt: "Sundae de la casa con caramelo y nata", span: "sm" },
+    { src: IMAGES.realTostadita, alt: "Tostada de aguacate con huevo cocido, hecha al momento", span: "sm" },
     { src: IMAGES.realCookies, alt: "Café con galletas de Charlotte's, recién preparado", span: "sm" },
     { src: IMAGES.interiorWarm, alt: "Interior acogedor de la cafetería", span: "wide" },
 ];

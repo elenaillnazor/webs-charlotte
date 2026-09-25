@@ -9,6 +9,7 @@ import {
 import { Phone, MapPin, ArrowDown, Sparkles } from "lucide-react";
 import { BUSINESS, IMAGES } from "../data/content";
 import { scrollToId } from "../lib/scroll";
+import { useGoogleRating } from "../lib/useGoogleRating";
 
 const easeOut = [0.22, 1, 0.36, 1];
 
@@ -26,6 +27,9 @@ const HeadlineLine = ({ children, index }) => (
 );
 
 const Hero = () => {
+    const { rating: liveRating } = useGoogleRating();
+    const ratingValue = liveRating || BUSINESS.rating;
+
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -138,7 +142,7 @@ const Hero = () => {
                                 </svg>
                             ))}
                         </span>
-                        <strong className="font-semibold text-ink">{BUSINESS.rating}</strong>
+                        <strong className="font-semibold text-ink">{ratingValue}</strong>
                         <span>· uno de los locales mejor valorados de Valdemoro</span>
                     </motion.div>
                 </motion.div>
@@ -170,7 +174,7 @@ const Hero = () => {
                         >
                             <img
                                 src={IMAGES.realIcecream}
-                                alt="Cono de helado artesanal servido en la barra de Charlotte's"
+                                alt="Tarta de Charlotte's con vela, lista para celebrar"
                                 className="w-full h-36 sm:h-44 object-cover"
                                 data-testid="hero-secondary-image"
                             />
@@ -185,7 +189,7 @@ const Hero = () => {
                             data-testid="hero-rating-card"
                         >
                             <p className="font-display text-3xl font-bold text-ink leading-none">
-                                {BUSINESS.rating}
+                                {ratingValue}
                                 <span className="text-amber text-lg">★</span>
                             </p>
                             <p className="text-xs font-medium text-cocoa mt-1.5">

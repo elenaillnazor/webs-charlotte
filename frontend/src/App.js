@@ -8,6 +8,7 @@ import TrustBar from "./components/TrustBar";
 import MenuSection from "./components/MenuSection";
 import Galeria from "./components/Galeria";
 import Testimonios from "./components/Testimonios";
+import Encargos from "./components/Encargos";
 import Contacto from "./components/Contacto";
 import Footer from "./components/Footer";
 import { BUSINESS } from "./data/content";
@@ -80,6 +81,7 @@ function App() {
                     <MenuSection />
                     <Galeria />
                     <Testimonios />
+                    <Encargos />
                     <Contacto />
                 </main>
                 <Footer />
